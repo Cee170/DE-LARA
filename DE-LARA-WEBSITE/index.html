@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stress Aware | Understand Stress</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: white;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+     /* Slower spin for the icon */
+  .animate-spin-slow {
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-down {
+  animation: fade-in-down 0.6s ease-out;
+}
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- 🔄 Loader -->
+  <!-- Loader Overlay -->
+<div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-700">
+  <a href="#" class="flex items-center gap-3">
+    <i data-lucide="brain-cog" class="w-7 h-7 text-teal-600 animate-spin-slow"></i>
+    <span class="text-2xl font-script font-semibold text-gray-800">stress aware</span>
+  </a>
+</div>
+
+
+  <!-- 🔝 NAVBAR -->
+  <header class="fixed top-0 w-full bg-gray-900 text-white z-40 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-3">
+  <i data-lucide="brain-cog" class="w-7 h-7 text-teal-600"></i>
+  <span class="text-2xl font-script text-white-800">stress aware</span>
+</a>
+
+      <nav class="space-x-6 text-sm hidden md:flex items-center">
+        <a href="#hero" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="home" class="w-4 h-4"></i>Home</a>
+        <a href="#intro" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="activity" class="w-4 h-4"></i>Stress</a>
+        <a href="#types" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="layers" class="w-4 h-4"></i>Types</a>
+        <a href="#symptoms" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="alert-triangle" class="w-4 h-4"></i>Symptoms</a>
+        <a href="#diseases" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="heart-crack" class="w-4 h-4"></i>Diseases</a>
+        <a href="#why" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="brain" class="w-4 h-4"></i>Why</a>
+        <a href="#remedies" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="pill" class="w-4 h-4"></i>Remedies</a>
+        <a href="#contact" class="flex items-center gap-1 hover:text-yellow-400"><i data-lucide="life-buoy" class="w-4 h-4"></i>Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 📄 MAIN CONTENT -->
+  <main>
+
+    <!-- 🧠 HERO -->
+    <!-- 🧠 HERO -->
+<section id="hero" class="relative bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('assets/images/hero-img.jpg')" data-aos="fade-up">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <div class="relative z-10 text-center text-white px-6 max-w-3xl">
+    <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 font-sans">
+      Understand Stress. Take Control.
+    </h2>
+    <p class="text-lg md:text-xl text-gray-200 mb-8 font-sans">
+      Empowering you with knowledge about stress, its impact, and how to manage it effectively.
+    </p>
+    <a href="#intro" class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded hover:bg-yellow-500 transition">
+      Learn More
+    </a>
+  </div>
+</section>
+
+<!-- ✅ Overlay Holder -->
+<div class="relative z-30 h-0">
+  <div class="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2">
+    <div class="bg-white shadow-2xl px-10 py-4 rounded-full border border-gray-300 text-gray-800 font-black text-3xl md:text-5xl font-sans animate-fade-in-down">
+      What is Stress?
+    </div>
+  </div>
+</div>
+
+<!-- 🔍 WHAT IS STRESS -->
+<section id="intro" class="relative min-h-screen flex items-center bg-gray-50 overflow-hidden pt-32" data-aos="fade-up">
+  <div class="absolute inset-0">
+    <img src="assets/images/what-bg.jpg" class="w-full h-full object-cover opacity-40" alt="Background" />
+    <div class="absolute inset-0 bg-white bg-opacity-30"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center z-10">
+    <div class="space-y-6 text-gray-800">
+      <div class="h-12"></div>
+       <p class="text-xl md:text-2xl leading-relaxed">
+    Stress is your body’s natural response to challenges. It helps you stay alert and responsive — but when it becomes chronic, it takes a toll on your body and mind.
+  </p>
+  <p class="text-xl md:text-2xl leading-relaxed">
+    Recognizing stress early and understanding how it affects you is the key to maintaining control and living a healthier life.
+  </p>
+    </div>
+    <div class="flex justify-center">
+      <img src="assets/images/stress-intro.jpg" alt="What is Stress" class="rounded-2xl shadow-xl max-h-[500px] w-auto object-cover hover:scale-105 transition duration-300 ease-in-out" />
+    </div>
+  </div>
+</section>
+
+    <!-- 🧱 TYPES OF STRESS -->
+    <section id="types" class="relative bg-gradient-to-b from-yellow-50 via-white to-yellow-100 min-h-screen flex items-center py-24" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 w-full">
+    <h2 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-20 font-sans text-center leading-tight relative">
+      <span class="inline-block relative">
+        Types of <span class="text-yellow-500 underline decoration-wavy decoration-4 underline-offset-4">Stress</span>
+      </span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-12 text-gray-700">
+      
+      <!-- Acute Stress -->
+      <div class="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition duration-300 relative z-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center mb-6">
+          <img src="assets/images/type-acute.jpg" alt="Acute Stress" class="w-32 h-32 object-cover rounded-full border-4 border-blue-100 shadow-md group-hover:scale-105 transition" />
+        </div>
+        <h3 class="text-2xl font-bold font-mono text-blue-600 mb-2 text-center">Acute Stress</h3>
+        <p class="text-sm leading-relaxed text-center">
+          Short bursts of stress caused by day-to-day events — fast to appear, fast to resolve.
+        </p>
+      </div>
+
+      <!-- Episodic Acute Stress -->
+      <div class="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition duration-300 relative z-10" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center mb-6">
+          <img src="assets/images/type-episodic.jpg" alt="Episodic Stress" class="w-32 h-32 object-cover rounded-full border-4 border-purple-100 shadow-md group-hover:scale-105 transition" />
+        </div>
+        <h3 class="text-2xl font-bold font-mono text-purple-600 mb-2 text-center">Episodic Acute</h3>
+        <p class="text-sm leading-relaxed text-center">
+          Regular episodes of stress from chaotic schedules or multitasking overload.
+        </p>
+      </div>
+
+      <!-- Chronic Stress -->
+      <div class="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition duration-300 relative z-10" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex justify-center mb-6">
+          <img src="assets/images/type-chronic.webp" alt="Chronic Stress" class="w-32 h-32 object-cover rounded-full border-4 border-red-100 shadow-md group-hover:scale-105 transition" />
+        </div>
+        <h3 class="text-2xl font-bold font-mono text-red-600 mb-2 text-center">Chronic Stress</h3>
+        <p class="text-sm leading-relaxed text-center">
+          Long-lasting stress from constant life pressure — hardest to escape, most damaging.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- 🚨 SYMPTOMS -->
+    <section id="symptoms" class="relative min-h-screen bg-gradient-to-b from-white via-gray-50 to-white py-24 flex items-center" data-aos="fade-left">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center z-10">
+
+    <!-- 🧠 Text Content -->
+    <div class="text-gray-800">
+      <h2 class="text-5xl font-extrabold leading-tight tracking-tight mb-6 font-sans">
+        Common <span class="text-yellow-500 underline underline-offset-4 decoration-wavy">Symptoms</span> of Stress
+      </h2>
+      <p class="text-gray-600 mb-10 text-lg">
+        Stress symptoms show up in different ways — physical pain, emotional shifts, or behavioral changes. Recognizing these early is key to managing them.
+      </p>
+
+      <!-- Symptom Cards -->
+      <div class="space-y-6">
+        <!-- Physical -->
+        <div class="bg-white/90 rounded-xl shadow p-5 border-l-4 border-blue-400">
+          <h3 class="font-bold text-blue-600 text-xl mb-1 flex items-center gap-2">
+            <i data-lucide="activity" class="w-5 h-5 text-blue-400"></i> Physical
+          </h3>
+          <p class="text-sm text-gray-700">Headaches, fatigue, muscle tension, sleep problems</p>
+        </div>
+
+        <!-- Emotional -->
+        <div class="bg-white/90 rounded-xl shadow p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-600 text-xl mb-1 flex items-center gap-2">
+            <i data-lucide="alert-circle" class="w-5 h-5 text-purple-400"></i> Emotional
+          </h3>
+          <p class="text-sm text-gray-700">Anxiety, restlessness, irritability, depression</p>
+        </div>
+
+        <!-- Behavioral -->
+        <div class="bg-white/90 rounded-xl shadow p-5 border-l-4 border-red-400">
+          <h3 class="font-bold text-red-600 text-xl mb-1 flex items-center gap-2">
+            <i data-lucide="user-x" class="w-5 h-5 text-red-400"></i> Behavioral
+          </h3>
+          <p class="text-sm text-gray-700">Overeating, substance abuse, withdrawal</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ Side Image -->
+    <div class="flex justify-center md:justify-end" data-aos="fade-in">
+      <img 
+  src="assets/images/symptoms-illustration.jpg" 
+  alt="Stress Symptoms" 
+  class="w-full max-w-md h-[500px] object-cover rounded-xl shadow-lg"
+  data-aos="zoom-in" 
+  data-aos-duration="1000"
+  data-aos-delay="300"
+/>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- 🩺 DISEASES -->
+    <section id="diseases" class="relative min-h-screen bg-gray-50 py-24 flex items-center overflow-hidden" data-aos="fade-up">
+  <!-- 🎨 Abstract Blob BG -->
+  <div class="absolute -top-32 -left-48 w-[700px] h-[700px] bg-gradient-to-br from-yellow-300 via-pink-200 to-purple-300 rounded-full blur-3xl opacity-30 z-0"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <h2 class="text-5xl font-extrabold text-center text-gray-900 mb-16 font-sans leading-tight">
+      Stress-Related <span class="text-yellow-500">Diseases</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 relative z-10">
+      
+      <!-- 🫀 Cardiovascular -->
+      <div class="bg-gradient-to-tr from-red-100 via-white to-red-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start gap-5">
+          <div class="bg-red-500/10 text-red-600 p-3 rounded-full">
+            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-1 text-gray-800">Cardiovascular Disease</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Increased heart rate and blood pressure strain the heart — a major risk from chronic stress.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🍬 Diabetes -->
+      <div class="bg-gradient-to-tr from-blue-100 via-white to-blue-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-start gap-5">
+          <div class="bg-blue-500/10 text-blue-600 p-3 rounded-full">
+            <i data-lucide="droplet" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-1 text-gray-800">Diabetes</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Stress spikes blood sugar levels, making it harder to manage glucose in diabetic individuals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🧠 Depression & Anxiety -->
+      <div class="bg-gradient-to-tr from-purple-100 via-white to-purple-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-start gap-5">
+          <div class="bg-purple-500/10 text-purple-600 p-3 rounded-full">
+            <i data-lucide="brain" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-1 text-gray-800">Depression & Anxiety</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">Long-term stress disrupts mood-regulating hormones and leads to mental health challenges.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🦠 Immune Suppression -->
+      <div class="bg-gradient-to-tr from-green-100 via-white to-green-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+        data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-start gap-5">
+          <div class="bg-green-500/10 text-green-600 p-3 rounded-full">
+            <i data-lucide="shield-off" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-1 text-gray-800">Immune Suppression</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">When stress becomes chronic, your immune system weakens — making illness more likely.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- 💥 WHY STRESS AFFECTS US -->
+   <section id="why" class="bg-white min-h-screen flex items-center py-24 overflow-hidden" data-aos="zoom-in">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- 🧠 Large Image Left -->
+    <div class="relative" data-aos="fade-right">
+      <img src="assets/images/stress-hormones.webp" alt="Hormones" 
+           class="w-full h-[500px] object-cover rounded-xl shadow-xl" />
+    </div>
+
+    <!-- 💬 Text Right -->
+    <div data-aos="fade-left" data-aos-delay="100">
+      <h2 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-6 font-sans leading-tight">
+        Why <span class="text-yellow-500">Stress</span> Affects Our Health
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-700 mb-4">
+        Stress triggers your body’s <span class="font-semibold text-red-500">fight-or-flight</span> mode.
+      </p>
+      <ul class="list-disc ml-6 text-gray-700 space-y-3">
+        <li>
+          It floods your system with <span class="font-bold text-blue-600">adrenaline</span> and <span class="font-bold text-pink-600">cortisol</span>.
+        </li>
+        <li>
+          This raises your heart rate and tightens your muscles.
+        </li>
+        <li>
+          Over time, it suppresses your immune system and increases inflammation.
+        </li>
+      </ul>
+      <p class="mt-4 text-gray-600">
+        If left unchecked, stress wears down your mind and body — fast.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- 💊 REMEDIES -->
+    <section id="remedies" class="relative w-full py-24 bg-gray-50 overflow-hidden">
+  <!-- 🌐 BLOB BACKGROUND OUTSIDE SWIPER -->
+  <!-- Blob SVG Background (better size & position) -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] -z-10 pointer-events-none opacity-20 blur-2xl">
+  <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a78bfa" stop-opacity="1" />
+        <stop offset="100%" stop-color="#facc15" stop-opacity="1" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#grad1)">
+      <animate attributeName="d" dur="10s" repeatCount="indefinite"
+        values="
+          M417,307Q386,364,331,395Q276,426,235,374Q194,322,181,271Q168,220,198,166Q228,112,295,109Q362,106,409,149Q456,192,417,243Q378,294,417,307Z;
+          M441,326Q407,392,343,404Q279,416,231,374Q183,332,160,278Q137,224,177,175Q217,126,289,116Q361,106,398,157Q435,208,441,269Q447,330,441,326Z;
+          M417,307Q386,364,331,395Q276,426,235,374Q194,322,181,271Q168,220,198,166Q228,112,295,109Q362,106,409,149Q456,192,417,243Q378,294,417,307Z
+        " />
+    </path>
+  </svg>
+</div>
+
+
+  <!-- Section Header -->
+  <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-center text-gray-800 mb-16 relative z-10 font-sans leading-tight">
+    Remedies & <span class="text-yellow-500">Coping Techniques</span>
+  </h2>
+
+  <!-- Swiper Carousel -->
+  <div class="swiper remediesSwiper w-full px-6">
+    <div class="swiper-wrapper">
+
+      <!-- Template Card -->
+      <!-- Repeat this div with different content for each remedy -->
+
+      <!-- CARD 1 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-exercise.avif" alt="Exercise" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-blue-600 mb-2">Physical Activity</h3>
+          <p class="text-sm text-gray-700">Exercise boosts endorphins and reduces stress hormones naturally.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-meditation.jpg" alt="Meditation" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-purple-600 mb-2">Mindfulness</h3>
+          <p class="text-sm text-gray-700">Meditation trains your brain to stay calm and present under pressure.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-therapy.jpg" alt="Therapy" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-pink-600 mb-2">Therapy</h3>
+          <p class="text-sm text-gray-700">CBT and talk therapy help you reframe thoughts and manage stress triggers.</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-sleep.webp" alt="Sleep" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-green-600 mb-2">Sleep & Diet</h3>
+          <p class="text-sm text-gray-700">Rest and nutrition are the backbone of emotional regulation.</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-support.jpg" alt="Support" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-yellow-600 mb-2">Support Systems</h3>
+          <p class="text-sm text-gray-700">Talking to friends, family, or counselors helps process emotional stress.</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-nature.jpg" alt="Nature" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-emerald-600 mb-2">Nature Walks</h3>
+          <p class="text-sm text-gray-700">Being in nature can reduce blood pressure and cortisol levels.</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="swiper-slide">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <img src="assets/images/remedy-journal.jpg" alt="Journaling" class="w-24 h-24 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-xl font-mono text-orange-600 mb-2">Journaling</h3>
+          <p class="text-sm text-gray-700">Writing down thoughts clears your mind and organizes emotions.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Pagination -->
+    <div class="flex justify-center mt-6 mb-5">
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- 📊 STATS -->
+    <section class="relative bg-gray-50 py-20" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-16 leading-tight">
+      Stress <span class="text-red-500">Statistics</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Stat 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <i data-lucide="alert-octagon" class="w-10 h-10 mx-auto text-red-500 mb-4"></i>
+        <p class="text-lg font-semibold text-gray-700">70% of adults report feeling stress daily</p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <i data-lucide="heart" class="w-10 h-10 mx-auto text-pink-500 mb-4"></i>
+        <p class="text-lg font-semibold text-gray-700">Stress is a major factor in heart disease</p>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="300">
+        <i data-lucide="smile-plus" class="w-10 h-10 mx-auto text-green-500 mb-4"></i>
+        <p class="text-lg font-semibold text-gray-700">Mindfulness can reduce stress by up to 40%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 📞 CONTACT -->
+    <section id="contact" class="relative bg-gradient-to-b from-blue-50 to-white py-20" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4 font-sans">
+      Need Help?
+    </h2>
+    <p class="text-lg md:text-xl text-gray-700 mb-6">
+      If you're struggling to manage stress, you're not alone. It's okay to ask for help.
+    </p>
+    <p class="text-md md:text-lg text-gray-600 mb-10">
+      Talk to someone you trust, or reach out to a mental health professional who can support you.
+    </p>
+    <a href="https://www.mentalhealth.gov" target="_blank"
+       class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700 transition duration-300">
+      Visit mentalhealth.gov
+    </a>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- 🔚 FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-3">
+    <p>&copy; 2025 Stress Aware. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+    AOS.init({ duration: 800, once: true });
+    lucide.createIcons();
+  </script>
+  <script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    loader.classList.add('opacity-0');
+
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 700); // should match `transition-opacity duration-700`
+  });
+</script>
+
+
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          script: ['Dancing Script', 'cursive'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Swiper JS -->
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.remediesSwiper', {
+    loop: true,
+    centeredSlides: false,
+    spaceBetween: 16, // smaller gap
+    slidesPerView: 1.2, // edge peek effect
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.3, // slightly peeking
+      },
+      1024: {
+        slidesPerView: 3.2,
+      },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+
+
+
+</body>
+</html>
